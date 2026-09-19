@@ -1,29 +1,29 @@
-# 📊 Análisis del Impacto de las Redes Sociales — Power BI
+# 📊 Walmart Sales Dashboard — Power BI
 
-Dashboard interactivo desarrollado en Power BI para analizar la relación entre el uso de redes sociales, el sueño, el estrés, la salud mental y el rendimiento académico de los estudiantes.
+Dashboard interactivo desarrollado en **Power BI** para analizar las ventas de Walmart y explorar su comportamiento a través del tiempo, tiendas y diferentes indicadores comerciales.
 
-El proyecto busca transformar datos sin procesar en información visual que permita identificar patrones y relaciones entre las diferentes variables.
+El proyecto transforma datos de ventas en información visual mediante **Power Query, DAX y visualizaciones interactivas**, permitiendo analizar tendencias y patrones de desempeño.
 
 ---
 
 ## 🎯 Pregunta de análisis
 
-**¿Cómo se relaciona el uso de las redes sociales con el sueño, el estrés, la salud mental y el rendimiento académico de los estudiantes?**
+**¿Cómo se comportan las ventas de Walmart a lo largo del tiempo y qué patrones pueden identificarse entre las diferentes tiendas y períodos?**
 
-El dashboard permite explorar estos indicadores mediante diferentes filtros y visualizaciones.
+El dashboard permite explorar el desempeño de las ventas mediante indicadores, gráficos y filtros interactivos.
 
 ---
 
 ## 📌 Indicadores principales
 
-El dashboard incluye indicadores como:
+El dashboard presenta indicadores relacionados con el desempeño de las ventas, incluyendo:
 
-* 👥 Total de estudiantes
-* 📱 Promedio de uso diario de redes sociales
-* 😴 Promedio de horas de sueño
-* 🧠 Nivel promedio de estrés
-* 🎓 Rendimiento académico promedio
-* ❤️ Indicadores relacionados con la salud mental
+* 💰 Ventas totales
+* 📈 Promedio de ventas
+* 🏪 Desempeño de las tiendas
+* 📅 Evolución de las ventas a través del tiempo
+* 📊 Comparación de ventas entre períodos
+* 🔝 Tiendas con mayor volumen de ventas
 
 ---
 
@@ -31,52 +31,54 @@ El dashboard incluye indicadores como:
 
 ### Vista general
 
-![Vista general del dashboard](screenshots/dashboard-overview.png)
+![Walmart Sales Dashboard](screenshots/Walmart%20_Sales_Dashboard.PNG)
 
-Vista general de los principales indicadores y visualizaciones del análisis.
+Vista general del dashboard con los principales KPIs y visualizaciones del análisis.
 
-### Redes sociales y sueño
+### Análisis de ventas
 
-![Redes sociales y sueño](screenshots/social-media-sleep.png)
+![Walmart Sales Analysis](screenshots/Walmart%20_Sales_Dashboard_1.PNG)
 
-Análisis de la relación entre el tiempo de uso de redes sociales y las horas de sueño.
+Visualización del comportamiento de las ventas y sus principales tendencias.
 
-### Redes sociales y rendimiento académico
+### Análisis comparativo
 
-![Redes sociales y rendimiento académico](screenshots/social-media-academic.png)
+![Walmart Sales Comparison](screenshots/Walmart%20_Sales_Dashboard_2.PNG)
 
-Comparación del uso de redes sociales con diferentes niveles de rendimiento académico.
+Comparación del desempeño de las ventas entre diferentes categorías y períodos.
 
-### Segmentación de estudiantes
+### Análisis de tiendas
 
-![Segmentación de estudiantes](screenshots/student-segmentation.png)
+![Walmart Store Analysis](screenshots/Walmart%20_Sales_Dashboard_3.PNG)
 
-Exploración de los datos mediante diferentes segmentos y características de los estudiantes.
+Análisis del desempeño de las diferentes tiendas mediante rankings y visualizaciones interactivas.
 
 ---
 
-## 🔎 Principales hallazgos
+## 🔎 Análisis realizado
 
-El análisis permite explorar patrones relacionados con:
+El dashboard permite explorar diferentes aspectos del conjunto de datos, entre ellos:
 
-* Uso diario de redes sociales y duración del sueño.
-* Niveles de estrés según el uso de redes sociales.
-* Diferencias en el rendimiento académico entre distintos grupos.
-* Relación entre hábitos de uso de redes sociales e indicadores de salud mental.
+* Evolución de las ventas a través del tiempo.
+* Comparación del desempeño entre tiendas.
+* Identificación de períodos con mayores y menores ventas.
+* Análisis de tendencias mediante series temporales.
+* Identificación de las tiendas con mayor volumen de ventas.
+* Comparación de indicadores mediante filtros interactivos.
 
-> **Nota:** Los resultados muestran relaciones observadas dentro del conjunto de datos y no deben interpretarse como evidencia de causalidad.
+> **Nota:** Los resultados y patrones observados corresponden exclusivamente al conjunto de datos utilizado en este proyecto.
 
 ---
 
 ## 🛠️ Herramientas utilizadas
 
-| Herramienta     | Uso                                    |
-| --------------- | -------------------------------------- |
-| **Python**      | Limpieza y preparación de datos        |
-| **Power BI**    | Visualización y creación del dashboard |
-| **DAX**         | Creación de medidas y cálculos         |
-| **Power Query** | Transformación de datos                |
-| **GitHub**      | Documentación y control del proyecto   |
+| Herramienta     | Uso                                      |
+| --------------- | ---------------------------------------- |
+| **Power BI**    | Desarrollo del dashboard y visualización |
+| **Power Query** | Limpieza y transformación de datos       |
+| **DAX**         | Creación de medidas y cálculos           |
+| **CSV**         | Fuente de datos                          |
+| **GitHub**      | Documentación y control de versiones     |
 
 ---
 
@@ -87,64 +89,84 @@ El proyecto siguió un flujo de trabajo de análisis de datos:
 ```text
 Datos originales
        ↓
-Limpieza de datos
+Carga del archivo CSV
        ↓
-Transformación
+Limpieza y transformación
        ↓
-Análisis exploratorio
+Modelado de datos
        ↓
 Creación de medidas DAX
        ↓
-Visualización en Power BI
+Análisis exploratorio
        ↓
-Obtención de insights
+Diseño del dashboard
+       ↓
+Visualización de insights
 ```
 
-### 1. Limpieza de datos
+### 1. Carga de datos
 
-Se utilizó Python para preparar el conjunto de datos mediante:
+Se utilizó un archivo CSV como fuente principal de información:
 
-* Identificación y tratamiento de valores faltantes.
+`Walmart_Sales.csv`
+
+Los datos fueron cargados en Power BI para iniciar el proceso de preparación y análisis.
+
+### 2. Limpieza y transformación
+
+Se utilizó **Power Query** para preparar los datos antes de construir las visualizaciones.
+
+Entre las tareas realizadas se incluyen:
+
 * Revisión de tipos de datos.
-* Detección de inconsistencias.
+* Transformación de columnas.
 * Preparación de variables para el análisis.
+* Organización de los datos para su utilización en Power BI.
 
-### 2. Transformación de datos
+### 3. Modelado de datos
 
-Los datos preparados fueron transformados y organizados para su utilización en Power BI.
+Los datos fueron estructurados para permitir el análisis mediante diferentes dimensiones y medidas.
 
-### 3. Modelado
-
-Se organizaron las variables necesarias para permitir el análisis interactivo y la aplicación de filtros.
+Se incorporó una estructura de fechas para facilitar el análisis temporal de las ventas.
 
 ### 4. DAX
 
 Se crearon medidas DAX para calcular los principales indicadores utilizados en el dashboard.
 
+Estas medidas permiten analizar métricas como:
+
+* Ventas totales.
+* Promedios.
+* Comparaciones.
+* Rankings.
+* Indicadores temporales.
+
 ### 5. Visualización
 
-Power BI se utilizó para desarrollar:
+Power BI se utilizó para desarrollar diferentes elementos visuales, incluyendo:
 
 * Tarjetas KPI.
-* Gráficos.
+* Gráficos de líneas.
+* Gráficos comparativos.
+* Rankings.
 * Segmentadores.
-* Comparaciones.
-* Visualizaciones interactivas.
+* Filtros interactivos.
 
 ---
 
 ## 📁 Estructura del proyecto
 
 ```text
-social-media-impact-powerbi-dashboard/
+walmart-sales-powerbi-dashboard/
 │
 ├── screenshots/
-│   ├── dashboard-overview.png
-│   ├── social-media-sleep.png
-│   ├── social-media-academic.png
-│   └── student-segmentation.png
+│   ├── Walmart_Sales_Dashboard.PNG
+│   ├── Walmart_Sales_Dashboard_1.PNG
+│   ├── Walmart_Sales_Dashboard_2.PNG
+│   └── Walmart_Sales_Dashboard_3.PNG
 │
-├── Social Media Impact.pbix
+├── Walmart Sales.pbix
+├── Walmart_Sales.csv
 ├── README.md
 └── ...
 ```
@@ -153,32 +175,30 @@ social-media-impact-powerbi-dashboard/
 
 ## 📂 Conjunto de datos
 
-El conjunto de datos contiene información de aproximadamente **4.500 estudiantes**, incluyendo variables relacionadas con:
+El proyecto utiliza un conjunto de datos de ventas de **Walmart** almacenado en formato CSV.
 
-* Nivel educativo
-* Uso de redes sociales
-* Horas de sueño
-* Estrés
-* Salud mental
-* Rendimiento académico
-* Características de los estudiantes
+El dataset contiene información utilizada para analizar el comportamiento de las ventas a través del tiempo y entre diferentes tiendas.
 
-Los datos fueron limpiados y preparados antes de realizar el análisis y desarrollar las visualizaciones.
+El archivo utilizado como fuente de datos es:
+
+**`Walmart_Sales.csv`**
 
 ---
 
 ## 💡 Habilidades demostradas
 
-Este proyecto demuestra experiencia práctica en:
+Este proyecto demuestra habilidades prácticas en:
 
-* Limpieza de datos
-* Análisis exploratorio
-* Visualización de datos
+* Análisis de datos
+* Limpieza y transformación de datos
 * Power BI
-* DAX
 * Power Query
-* Desarrollo de KPIs
+* DAX
 * Diseño de dashboards
+* Desarrollo de KPIs
+* Análisis temporal
+* Comparación de métricas
+* Data visualization
 * Data storytelling
 * Documentación de proyectos
 
@@ -186,18 +206,23 @@ Este proyecto demuestra experiencia práctica en:
 
 ## 🚀 Objetivo del proyecto
 
-El objetivo fue desarrollar un proyecto completo de análisis de datos, desde la preparación de los datos hasta la creación de un dashboard interactivo en Power BI.
+El objetivo fue desarrollar un proyecto completo de **Data Analytics utilizando Power BI**, comenzando con un conjunto de datos en bruto y transformándolo en un dashboard interactivo.
 
-Este proyecto forma parte de mi portafolio mientras desarrollo mis habilidades en **Data Analytics, Power BI, SQL y Python**.
+El proyecto demuestra el proceso de:
+
+**Datos → Transformación → Modelado → DAX → Visualización → Análisis**
+
+Este proyecto forma parte de mi portafolio para desarrollar y demostrar habilidades en **Data Analytics, Power BI, SQL y Python**.
 
 ---
 
 ## 📎 Archivos del proyecto
 
-**Reporte de Power BI:**
-`Social Media Impact.pbix`
+📊 **Power BI:** `Walmart Sales.pbix`
 
-El archivo `.pbix` se encuentra disponible dentro de este repositorio.
+📄 **Dataset:** `Walmart_Sales.csv`
+
+Los archivos se encuentran disponibles dentro de este repositorio.
 
 ---
 
@@ -205,6 +230,6 @@ El archivo `.pbix` se encuentra disponible dentro de este repositorio.
 
 **José Ernesto Gomez Guido**
 
-Estudiante de Ingeniería en Sistemas | Business Process & Data Analyst | Power BI | SQL | Python
+Systems Engineering Student | Business Process & Data Analyst | Power BI | SQL | Python
 
-[LinkedIn](https://www.linkedin.com/in/ernesto-gomez-590a51173/) · [GitHub](https://github.com/Neto00464)
+🔗 [LinkedIn](https://www.linkedin.com/in/ernesto-gomez-590a51173/) · [GitHub](https://github.com/Neto00464)
